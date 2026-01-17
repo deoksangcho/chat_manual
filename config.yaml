@@ -1,0 +1,36 @@
+# PDF 처리 설정
+pdf:
+  source_file: "2025 학교 업무매뉴얼 행정(최종).pdf"
+
+# 청킹 설정
+chunking:
+  chunk_size: 1500          # 토큰 수 기준
+  chunk_overlap: 200        # 오버랩 토큰 수
+  separators:
+    - "\n\n\n"              # 대분류 구분
+    - "\n\n"                # 중분류 구분
+    - "\n"                  # 소분류 구분
+    - ". "                  # 문장
+    - " "                   # 단어
+
+# 임베딩 설정
+embedding:
+  model: "text-embedding-3-small"
+  dimensions: 1536
+
+# LLM 설정
+llm:
+  model: "gpt-4o-mini"
+  temperature: 0.0
+  max_tokens: 3000
+
+# 검색 설정
+retrieval:
+  vector_top_k: 12
+  bm25_top_k: 12
+  final_top_k: 10
+  
+# 벡터 DB 경로
+database:
+  chroma_path: "./data/chroma_db"
+  bm25_path: "./data/bm25_index.pkl"

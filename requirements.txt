@@ -1,0 +1,24 @@
+# PDF 처리
+PyMuPDF==1.23.8
+
+# OpenAI
+openai==1.12.0
+
+# LangChain
+langchain==0.1.6
+langchain-community==0.0.20
+langchain-openai==0.0.2
+
+# 벡터 DB
+chromadb==0.4.22
+
+# 검색
+rank-bm25==0.2.2
+
+# 웹 프레임워크
+streamlit==1.31.0
+
+# 유틸리티
+python-dotenv==1.0.1
+PyYAML==6.0.1
+tqdm==4.66.1
